@@ -58,3 +58,6 @@ target/
 
 # Notebooks
 .ipynb_checkpoints
+
+# Keep json files out
+*.json
