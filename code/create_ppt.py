@@ -1,3 +1,11 @@
+"""
+See http://pbpython.com/creating-powerpoint.html for details on this script
+Requires https://python-pptx.readthedocs.org/en/latest/index.html
+
+Example program showing how to read in Excel, process with pandas and
+output to a PowerPoint file.
+"""
+
 from __future__ import print_function
 from pptx import Presentation
 from pptx.util import Inches
