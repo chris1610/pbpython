@@ -93,10 +93,12 @@ def press(button):
     else:
         app.stop()
 
+
 # Create the GUI Window
 app = gui("PDF Splitter", useTtk=True)
-app.setTtkTheme("clam")
-print(app.getTtkThemes())
+app.setTtkTheme("default")
+# Uncomment below to see all available themes
+# print(app.getTtkThemes())
 app.setSize(500, 200)
 
 # Add the interactive components
