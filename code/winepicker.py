@@ -21,7 +21,7 @@ def load_data():
     return df
 
 # Column order for displaying the details of a specific review
-col_order = ['price', 'points', 'variety', 'province', 'description']
+col_order = ["price", "points", "variety", "province", "description"]
 
 all_provinces = [
     "All", "South Australia", "Victoria", "Western Australia",
@@ -33,7 +33,7 @@ desc = Div(text="All Provinces", width=800)
 province = Select(title="Province", options=all_provinces, value="All")
 price_max = Slider(start=0, end=900, step=5, value=200, title="Maximum Price")
 title = TextInput(title="Title Contains")
-details = Div(text='Selection Details:', width=800)
+details = Div(text="Selection Details:", width=800)
 
 # Populate the data with the dataframe
 source = ColumnDataSource(data=load_data())
@@ -59,13 +59,13 @@ p = figure(
     tools=TOOLS,
     x_axis_label="points",
     y_axis_label="price (USD)",
-    toolbar_location='above')
+    toolbar_location="above")
 
 p.circle(
     y="price",
-    x='points',
+    x="points",
     source=source,
-    color='variety_color',
+    color="variety_color",
     size=7,
     alpha=0.4)
 
@@ -110,7 +110,7 @@ def selection_change(attrname, old, new):
     is used. Determine which items are selected and show the details below
     the graph
     """
-    selected = source.selected['1d']['indices']
+    selected = source.selected["1d"]["indices"]
 
     # Need to get a list of the active reviews so the indices will match up
     df_active = select_reviews()
@@ -119,7 +119,7 @@ def selection_change(attrname, old, new):
     # as an HTML table
     if selected:
         data = df_active.iloc[selected, :]
-        temp = data.set_index('title').T.reindex(index=col_order)
+        temp = data.set_index("title").T.reindex(index=col_order)
         details.text = temp.style.render()
     else:
         details.text = "Selection Details"
@@ -130,18 +130,18 @@ def selection_change(attrname, old, new):
 controls = [province, price_max, title]
 
 for control in controls:
-    control.on_change('value', lambda attr, old, new: update())
+    control.on_change("value", lambda attr, old, new: update())
 
 # If the source is changed to a selection, execute that selection process
-source.on_change('selected', selection_change)
+source.on_change("selected", selection_change)
 
 # The final portion is to layout the parts and get the server going
 
 # Build a box for all the controls
-inputs = widgetbox(*controls, sizing_mode='fixed')
+inputs = widgetbox(*controls, sizing_mode="fixed")
 
 # Define a simple layout
-l = layout([[desc], [inputs, p], [details]], sizing_mode='fixed')
+l = layout([[desc], [inputs, p], [details]], sizing_mode="fixed")
 
 # Update the data and instantiate the service
 update()
