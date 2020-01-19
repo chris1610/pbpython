@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{{title}}</title>
+
+  <style type="text/css">
+    
+    /* CLIENT-SPECIFIC STYLES */
+    body,
+    table,
+    td,
+    a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    /* RESET STYLES */
+    img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      font-family: 'Average Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    pre {
+      padding: 16px;
+      font-size: 85%;
+      line-height: 1.45;
+      border-radius: 3px;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 85%;
+      margin: 0;
+      padding: 0.2em 0;
+      border-radius: 3px;
+    }
+
+    blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: 0.25em solid #dfe2e5;
+    }
+
+    
+    h1, h2, h3, h4 {
+      font-family: sans-serif;
+      font-weight: 500;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 200%;
+
+    }
+
+    h1 a {
+      text-decoration: none
+    }
+
+    h2 {
+
+        font-size: 125%;
+    }
+
+   h3, h4 {
+
+        font-size: 115%;
+    }
+
+
+    .lead {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    li {
+        font-size: 100%;
+    }
+
+    /* ANDROID CENTER FIX */
+    div[style*="margin: 16px 0;"] {
+      margin: 0 !important;
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#F2F2F2;">
+  <center>
+
+    <div style="background-color:#F2F2F2; max-width: 640px; margin: auto;">
+      <!--[if mso]>
+    <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+    <tr>
+    <td>
+    <![endif]-->
+
+      <table width="640" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:640px; width:100%;"
+        bgcolor="#FFFFFF">
+        <tr>
+          <td align="center" valign="top" style="padding:10px;">
+
+            <table width="600" cellspacing="0" cellpadding="0" border="0" align="center"
+              style="max-width:600px; width:100%;">
+              <tr bgcolor="#eee">
+                <td align="center" valign="top" style="padding:10px;">
+                  <h1> <a href=".">My Newsletter</a></h1>
+                  <p class="lead">Witty saying here</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td align="left" valign="top" style="padding:10px;">
+                  {{email_content}}
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+      <!--[if mso]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </div>
+    <p
+      style="border-top: 1px solid #c6c6c6; color: #a9a9a9; margin-top: 50px; padding-top: 20px;font-size:13px; margin-bottom: 13px;">
+      You received this email because you subscribed to our list.
+      {% raw %} 
+        You can  <a href="{{UnsubscribeURL}}" style="color:#a9a9a9;" target="_blank" >unsubscribe</a> at any time.</p> 
+        <p style="color: #a9a9a9;margin-bottom: 13px;font-size:13px;">{{SenderInfoLine}}</p>
+     {% endraw %}
+  </center>
+</body>
+
+</html>
