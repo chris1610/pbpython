@@ -14,15 +14,17 @@ template.html which contain the HTML structure that should render
 as a responsive email.
 
 ### Prerequisites
-This script requires python >= 3.5 and the following dependencise:
+This script requires python >= 3.5 and the following dependencies:
 
 * [python-markdown2](https://github.com/trentm/python-markdown2)
 * [jinja](https://jinja.palletsprojects.com/en/2.10.x/)
 * [premailer](https://github.com/peterbe/premailer)
 * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
+Install them using pip or conda before running the script.
+
 ## Using the script
-The script is run from the command line. 
+This is a standalone script that should be from the command line. 
 
 To see the help:
 ```
@@ -48,8 +50,15 @@ Using the sample template file on the provided file:
 python email_gen.py sample_doc.md
 ```
 
-Will generate a inlined HTML file titled sample_doc_email.html that can be copied
+Will generate an inlined HTML file titled sample_doc_email.html that can be copied
 into an HTML email.
+
+## Customizing
+This simple script assumes that the markdown input file has header meta data
+that would be suitable for generating an article with [pelican](https://docs.getpelican.com/en/stable/).
+
+You will likely need to customize the template and the email_gen.py file 
+for your own needs.
 
 ## License
 This software is released under the BSD 3-Clause License.
