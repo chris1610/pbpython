@@ -1,0 +1,103 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+// Replace the GUIDs below
+// In python :
+// import uuid
+// uuid.uuid(4)
+
+// You will need to modify this for your own paths
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{2c4de343-38b8-51cf-b940-2309a097f518}",
+
+    "profiles":
+    {
+        "defaults":
+        {
+            // Put settings here that you want to apply to all profiles
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile
+                "guid": "{a6976a91-85fd-4393-a58d-bc92de8bdac5}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile
+                "guid": "{d62ecbfb-c1b9-40a3-995e-59f623d7e7db}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the Launch conda environemt
+                "guid": "{0a4fd107-2b4e-4b80-aa2d-d26e3578d16a}",
+                "name": "conda",
+                "commandline": "cmd.exe /K C:\\Users\\chris\\miniconda3\\Scripts\\activate.bat C:\\Users\\chris\\miniconda3",
+                "startingDirectory": "c:/Users/chris/win_dev",
+                "icon": "c:/users/chris/OneDrive/Documents/icons/python-logo-sm.png",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                // Ubuntu
+                "guid": "{2c4de343-38b8-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "fontFace": "Cascadia Code PL",
+                "name": "Ubuntu",
+                "colorScheme" : "UbuntuLegit",
+                "startingDirectory":"//wsl$/Ubuntu/home/chris/",
+                "icon": "c:/users/chris/OneDrive/Documents/icons/small_vu.png",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "name": "Ubuntu-18.04",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+
+    // Add custom color schemes to this array
+    "schemes": [
+        {
+            "background":  "#2C001E",
+            "black":  "#4E9A06",
+            "blue":  "#3465A4",
+            "brightBlack":  "#555753",
+            "brightBlue":  "#729FCF",
+            "brightCyan":  "#34E2E2",
+            "brightGreen":  "#8AE234",
+            "brightPurple":  "#AD7FA8",
+            "brightRed":  "#EF2929",
+            "brightWhite":  "#EEEEEE",
+            "brightYellow":  "#FCE94F",
+            "cyan":  "#06989A",
+            "foreground":  "#EEEEEE",
+            "green": "#4E9A06",
+            "name":  "UbuntuLegit",
+            "purple":  "#75507B",
+            "red":  "#CC0000",
+            "white":  "#D3D7CF",
+            "yellow":  "#C4A000"
+        }
+
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": []
+}
