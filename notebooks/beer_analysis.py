@@ -1,19 +1,19 @@
 """
 Beer Analysis - Using Jupyter Code Cells
+Accompanying article on https://pbpython.com
 """
 # %%
 import pandas as pd
 import seaborn as sns
 import plotly.express as px
-
 # %%
+# Load in the Craft Beer analysis
 df_beers = pd.read_csv(
     'https://github.com/nickhould/craft-beers-dataset/blob/master/data/processed/beers.csv?raw=True',
     index_col=0)
 df_breweries = pd.read_csv(
     'https://github.com/nickhould/craft-beers-dataset/blob/master/data/processed/breweries.csv?raw=True',
     index_col=0)
-
 # %%
 sns.set_style('whitegrid')
 
@@ -42,7 +42,6 @@ all_beer.head()
 
 # %%
 empty_data = all_beer.isna().sum()
-print(empty_data)
 
 # %%
 all_beer.info()
