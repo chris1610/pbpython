@@ -41,6 +41,7 @@ all_beer = pd.merge(df_beers,
 all_beer.head()
 
 # %%
+# Useful to check for null values
 empty_data = all_beer.isna().sum()
 
 # %%
@@ -78,6 +79,7 @@ fig = px.scatter(all_beer,
 fig.show()
 
 # %%
+# Do some analysis on MN beers
 mn_beer = all_beer[all_beer['state'].str.contains('MN')].copy()
 
 # %%
@@ -87,6 +89,7 @@ all_beer['state'].value_counts()
 all_beer.describe()
 
 # %%
+# Any relationship betwee alcohol volume and IBU?
 fig = px.scatter(mn_beer,
                  x="abv",
                  y="ibu",
