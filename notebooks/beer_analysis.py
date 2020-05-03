@@ -1,6 +1,6 @@
 """
 Beer Analysis - Using Jupyter Code Cells
-Accompanying article on https://pbpython.com
+Accompanying article on https://pbpython.com/notebook-alternative.html
 """
 # %%
 import pandas as pd
